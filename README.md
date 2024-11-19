@@ -29,7 +29,7 @@ The API is documented using **Springdoc OpenAPI**. You can explore the API and t
 Ensure you have the following installed:
 - Java 21 or higher.
 - Maven 3.8.0 or higher.
-- A MySQL database (or another database, configurable in `application.properties`).
+- A MySQL database (or another database, configurable in `application.yaml`).
 
 ---
 
