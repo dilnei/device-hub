@@ -1,17 +1,27 @@
+
 spring:
   application:
     name: device-hub
   datasource:
-    url: ${DB_URL:jdbc:mysql://localhost:33064/dev_hub_db}
+    url: ${DB_URL:jdbc:mysql://localhost:33064/dev_hub_db?serverTimezone=UTC}
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: ${DB_USERNAME:dev_user}
     password: ${DB_PASSWORD:dev_passwd}
   flyway:
     user: ${DB_ADMIN_USERNAME:root}
     password: ${DB_ADMIN_PASSWORD:root}
+    enabled: true
   jpa:
     hibernate:
       ddl-auto: none
   sql:
     init:
       mode: always
+  docker:
+    compose:
+      file: docker/docker-compose.yml
+logging:
+  level:
+    org:
+      flywaydb:
+        core: DEBUG

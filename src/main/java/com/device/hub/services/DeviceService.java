@@ -27,6 +27,12 @@ public class DeviceService {
   }
 
   public DeviceResponse createDevice(DeviceCreateRequest deviceCreateRequest) {
+
+//    If the business logic requires that a device with the same name cannot be created
+//    if(deviceRepository.existsByName(deviceCreateRequest.name())) {
+//      throw new IllegalArgumentException("Device with name " + deviceCreateRequest.name() + " already exists");
+//    }
+
     DeviceEntity device = deviceMapper.toDevice(deviceCreateRequest);
     device = deviceRepository.save(device);
     return deviceMapper.toDevice(device);

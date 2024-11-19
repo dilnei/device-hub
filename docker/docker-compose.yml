@@ -1,7 +1,7 @@
 services:
   database-pre-sale-service:
     image: mysql:latest
-    container_name: db-pre-sale-service
+    container_name: db-device-service
     ports:
       - "33064:3306"
     environment:
