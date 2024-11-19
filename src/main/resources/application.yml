@@ -6,6 +6,9 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: ${DB_USERNAME:dev_user}
     password: ${DB_PASSWORD:dev_passwd}
+  flyway:
+    user: ${DB_ADMIN_USERNAME:root}
+    password: ${DB_ADMIN_PASSWORD:root}
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: none
