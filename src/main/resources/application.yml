@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: device-hub
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:33064/dev_hub_db}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${DB_USERNAME:dev_user}
+    password: ${DB_PASSWORD:dev_passwd}
+  jpa:
+    hibernate:
+      ddl-auto: create

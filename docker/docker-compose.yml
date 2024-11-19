@@ -1,0 +1,12 @@
+services:
+  database-pre-sale-service:
+    image: mysql:latest
+    container_name: db-pre-sale-service
+    ports:
+      - "33064:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: dev_hub_db
+      MYSQL_USER: dev_user
+      MYSQL_PASSWORD: dev_passwd
+    command: mysqld --sql_mode="NO_ENGINE_SUBSTITUTION"
